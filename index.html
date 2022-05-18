@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2: Chapters 1 & 2</title>
+</head>
+<body>
+    <p id="my1">Michael Nolan</p>
+    <p id="my2">mhnolan@my.waketech.edu</p>
+    <p id="my3">Computer Programming & Development</p>
+    <button type="button" onclick='changeColor()'>Click Me!</button>
+
+    <script>
+        backgroundBlack()
+
+        let counter = 2
+        function changeColor() {
+            if (counter % 2 == 0 ) {
+                counter = 3
+                backgroundWhite()
+            } else {
+                counter = 2
+                backgroundBlack()
+            }
+        }
+
+        function backgroundWhite() {
+            document.body.style.backgroundColor = "white";
+            document.getElementById("my1").style.color = "black";
+            document.getElementById("my2").style.color = "black";
+            document.getElementById("my3").style.color = "black";
+        }
+
+        function backgroundBlack() {
+            document.body.style.backgroundColor = "black";
+            document.getElementById("my1").style.color = "white";
+            document.getElementById("my2").style.color = "white";
+            document.getElementById("my3").style.color = "white";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
