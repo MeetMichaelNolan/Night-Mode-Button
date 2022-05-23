@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <title>Assignment 2: Chapters 1 & 2</title>
 </head>
+
 <body>
-    <p id="my1">Michael Nolan</p>
-    <p id="my2">mhnolan@my.waketech.edu</p>
-    <p id="my3">Computer Programming & Development</p>
-    <button type="button" onclick='changeColor()'>Click Me!</button>
+    <p id="my1" class="main">Michael Nolan</p>
+    <p id="my2" class="main">I work at Target</p>
+    <p id="my3" class="main">My major is Computer Programming & Development</p>
+    <button type="button" onclick='changeColor()' id="btn">Dark Mode</button>
 
     <script>
-        backgroundBlack()
 
         let counter = 2
         function changeColor() {
             if (counter % 2 == 0 ) {
                 counter = 3
-                backgroundWhite()
+                backgroundBlack()
+                document.getElementById("btn").innerHTML = "Light Mode"
             } else {
                 counter = 2
-                backgroundBlack()
+                backgroundWhite()
+                document.getElementById("btn").innerHTML = "Dark Mode"
             }
         }
 
@@ -32,7 +34,7 @@
         }
 
         function backgroundBlack() {
-            document.body.style.backgroundColor = "black";
+            document.body.style.backgroundColor = "black"
             document.getElementById("my1").style.color = "white";
             document.getElementById("my2").style.color = "white";
             document.getElementById("my3").style.color = "white";
@@ -40,7 +42,3 @@
     </script>
 </body>
 </html>
-
-
-
-
